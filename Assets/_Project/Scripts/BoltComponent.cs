@@ -1,19 +1,37 @@
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
-public class BoltComponent : MonoBehaviour
+public class BoltTightening : MonoBehaviour
 {
-    private Transform wrench, bolt;
+    public Transform bolt; // The bolt that needs to be tightened
+    public float rotationSpeed = 100f; // Speed at which the bolt tightens
+    private bool isTightening = false; // State to check if the bolt is being tightened
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Wrench"))
+        {
+            // Start tightening when the wrench is in contact with the bolt
+            isTightening = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Wrench"))
+        {
+            // Stop tightening when the wrench is no longer in contact with the bolt
+            isTightening = false;
+        }
+    }
+
     private void Update()
     {
-        // Assuming wrench and bolt are Transform objects
-        wrench.position = bolt.position; 
-        wrench.rotation = wrench.rotation * Quaternion.FromToRotation(wrench.up, 
-            Vector3.ProjectOnPlane(wrench.up, bolt.right));
-            
-        // Assuming you have an Animator component attached to the wrench GameObject
-        Animator wrenchAnimator = wrench.GetComponent<Animator>();
-        wrenchAnimator.SetTrigger("Rotate");
-        
+        if (isTightening)
+        {
+            // Rotate the bolt to simulate tightening
+            bolt.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
+        }
     }
 }
 
