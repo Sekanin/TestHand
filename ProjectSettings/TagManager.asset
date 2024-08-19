@@ -8,6 +8,7 @@ TagManager:
   - SLAVIA
   - Left Hand
   - Right Hand
+  - 2RS-485_CAN
   layers:
   - Default
   - TransparentFX
