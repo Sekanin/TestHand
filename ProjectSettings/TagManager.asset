@@ -9,6 +9,8 @@ TagManager:
   - Left Hand
   - Right Hand
   - 2RS-485_CAN
+  - SDR-120-24
+  - Mitsubishi FX5U-32MR_DS
   layers:
   - Default
   - TransparentFX
