@@ -23,7 +23,7 @@ public class ActivateTeleportationRay : MonoBehaviour
         
         leftTeleportation.SetActive(!isLeftRayHovering && leftCancel.action.ReadValue<float>() == 0 && leftActivate.action.ReadValue<float>() > 0.1f);
         
-        bool isRightRayHovering = rightRay.TryGetHitInfo(out Vector3 rihgtPos, out Vector3 rihgtNormal, out int rihgtNumer, out bool rihgtValid);
+        bool isRightRayHovering = rightRay.TryGetHitInfo(out Vector3 rightPos, out Vector3 rightNormal, out int rightNumer, out bool rightValid);
         
         rightTeleportation.SetActive(!isRightRayHovering && rightCancel.action.ReadValue<float>() == 0 && rightActivate.action.ReadValue<float>() > 0.1f);
     }

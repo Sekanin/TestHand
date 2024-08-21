@@ -11,6 +11,8 @@ TagManager:
   - 2RS-485_CAN
   - SDR-120-24
   - Mitsubishi FX5U-32MR_DS
+  - SDR-240-24
+  - BKZ-1.00
   layers:
   - Default
   - TransparentFX
