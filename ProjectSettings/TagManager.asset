@@ -13,6 +13,8 @@ TagManager:
   - Mitsubishi FX5U-32MR_DS
   - SDR-240-24
   - BKZ-1.00
+  - Mitsubishi FX5-8EX_ES
+  - FX-485ADP
   layers:
   - Default
   - TransparentFX
