@@ -1,27 +1,51 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class DuplicateOnGrab : MonoBehaviour
 {
-    public GameObject objectToClone;
-    public Vector3 fixedPosition; // The position where the duplicate will always appear
-
-    void Start()
+    [SerializeField] private XRGrabInteractable newPrefab;
+    
+    private XRGrabInteractable grabInteractable;
+    
+    private void Start()
     {
-        // Ensure the object has an XRGrabInteractable component
-        XRGrabInteractable grabInteractable = objectToClone.GetComponent<XRGrabInteractable>();
-        if (grabInteractable == null)
-        {
-            grabInteractable = objectToClone.AddComponent<XRGrabInteractable>();
-        }
-
-        // Subscribe to the select entered event
-        grabInteractable.selectEntered.AddListener(OnGrab);
+        StartCoroutine(CreateWithDelay(1.0f)); // 1 second delay
     }
 
-    void OnGrab(SelectEnterEventArgs args)
+    private void OnDestroy()
     {
-        // Duplicate the object at the fixed position
-        Instantiate(objectToClone, fixedPosition, objectToClone.transform.rotation);
+        grabInteractable.selectEntered.RemoveListener(OnGrabbed);
+    }
+    
+    // This method is called when the object is grabbed
+    private void OnGrabbed(SelectEnterEventArgs args)
+    {
+        // Start the coroutine to duplicate the object with a delay
+        StartCoroutine(CreateWithDelay(1.0f)); // 1 second delay
+    }
+    
+    private IEnumerator CreateWithDelay(float delay)
+    {
+        // Wait for the specified delay time
+        yield return new WaitForSeconds(delay);
+
+        var created = Instantiate(newPrefab);
+
+        //duplicate.transform.position = fixedPosition;
+        created.transform.position = transform.position;
+
+        var rb = created.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.useGravity = true;
+            rb.isKinematic = false;
+        }
+        
+        if (grabInteractable != null) grabInteractable.selectEntered.RemoveListener(OnGrabbed);
+        
+        grabInteractable = created;
+        grabInteractable.selectEntered.AddListener(OnGrabbed);
     }
 }
