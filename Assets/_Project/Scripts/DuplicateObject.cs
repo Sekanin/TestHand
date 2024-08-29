@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -18,8 +17,6 @@ public class DuplicateOnGrab : MonoBehaviour
     {
         grabInteractable.selectEntered.RemoveListener(OnGrabbed);
     }
-    
-    // This method is called when the object is grabbed
     private void OnGrabbed(SelectEnterEventArgs args)
     {
         // Start the coroutine to duplicate the object with a delay
