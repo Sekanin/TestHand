@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 5315241306029538846}
   m_Layer: 0
   m_Name: KVT-1,14-160-230-100 Clap
-  m_TagString: Untagged
+  m_TagString: KVT-1,14-160-230-100 Clap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

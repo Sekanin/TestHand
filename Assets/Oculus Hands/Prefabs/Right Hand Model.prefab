@@ -888,7 +888,6 @@ GameObject:
   - component: {fileID: 5686134208185136530}
   - component: {fileID: 5686134208192617028}
   - component: {fileID: 8512106385991517874}
-  - component: {fileID: 796840768911906161}
   m_Layer: 0
   m_Name: Right Hand Model
   m_TagString: Untagged
@@ -971,38 +970,6 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   handAnimator: {fileID: 5686134208192617028}
---- !u!114 &796840768911906161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5686134208185362930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d31ae5a40f0b4b8439536e6ceb548fd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HandType: 1
-  root: {fileID: 5686134208185136530}
-  animator: {fileID: 5686134208192617028}
-  fingerBones:
-  - {fileID: 5686134208185136546}
-  - {fileID: 5686134208185136556}
-  - {fileID: 5686134208185136558}
-  - {fileID: 5686134208185136554}
-  - {fileID: 5686134208185136564}
-  - {fileID: 5686134208185136566}
-  - {fileID: 5686134208185136562}
-  - {fileID: 5686134208185136572}
-  - {fileID: 5686134208185136574}
-  - {fileID: 5686134208185136568}
-  - {fileID: 5686134208185136516}
-  - {fileID: 5686134208185136518}
-  - {fileID: 5686134208185136512}
-  - {fileID: 5686134208185136524}
-  - {fileID: 5686134208185136526}
-  - {fileID: 5686134208185136520}
 --- !u!1 &5686134208185362932
 GameObject:
   m_ObjectHideFlags: 0
