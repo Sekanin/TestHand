@@ -22,6 +22,8 @@ TagManager:
   - SP 516-038-000-301 SLAVIA 1
   - KVT-1,14-160-230-100 Clap
   - IPBG 8-230
+  - SamplesInfoPanel
+  - PU-03 21-05-00-00-000
   layers:
   - Default
   - TransparentFX

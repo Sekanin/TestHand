@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: plastini(black)
+  m_Name: "\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u043E\u0440_\u041F\u041C12_025150_25\u0410_42\u0410\u0421_\u0423\u0425\u041B4_\u0412_\u041A\u042D\u0410"
   m_Shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
