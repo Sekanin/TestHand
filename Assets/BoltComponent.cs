@@ -27,15 +27,12 @@ public class Bolt : MonoBehaviour
 
             if (Vector3.Distance(transform.position, initialPosition) >= maxDistance)
             {
-                isUnscrewing = true; // Prevent further unscrewing
-                MakeBoltDisappear();
+                isUnscrewing = true;
+                gameObject.AddComponent<Rigidbody>();
+                gameObject.GetComponent<Collider>().isTrigger = false;
+
             }
         }
-    }
-
-    void MakeBoltDisappear()
-    {
-        Destroy(gameObject, 0.1f);
     }
 }
 
