@@ -35,11 +35,7 @@ public class Bolt : MonoBehaviour
 
     void MakeBoltDisappear()
     {
-        // Option 1: Désactiver le rendu du boulon
-        //gameObject.GetComponent<Renderer>().enabled = false;
-
-        // Option 2: Détruire le boulon après un court délai
-        Destroy(gameObject, 0.5f);
+        Destroy(gameObject, 0.1f);
     }
 }
 
