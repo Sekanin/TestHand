@@ -32,12 +32,14 @@ public class BoltUnscrewer : MonoBehaviour
         {
             bolt.transform.Rotate(0, 0, unscrewSpeed * Time.deltaTime);
             bolt.transform.Translate(direction * moveSpeed * Time.deltaTime);
-            bolt.AddComponent<Rigidbody>();
-            bolt.GetComponent<Collider>().isTrigger = false;
+            //bolt.AddComponent<Rigidbody>();
+            //bolt.GetComponent<Collider>().isTrigger = false;
 
             yield return null;
         }
         //bolt.SetActive(false);
+        bolt.AddComponent<Rigidbody>();
+        bolt.GetComponent<Collider>().isTrigger = false;
     }
 }
 
