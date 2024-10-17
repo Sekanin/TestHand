@@ -10,7 +10,7 @@ public class DuplicateOnGrab : MonoBehaviour
     
     private void Start()
     {
-        StartCoroutine(CreateWithDelay(1.0f)); // 1 second delay
+        StartCoroutine(CreateWithDelay(1.0f));
     }
 
     private void OnDestroy()
@@ -19,18 +19,15 @@ public class DuplicateOnGrab : MonoBehaviour
     }
     private void OnGrabbed(SelectEnterEventArgs args)
     {
-        // Start the coroutine to duplicate the object with a delay
-        StartCoroutine(CreateWithDelay(1.0f)); // 1 second delay
+        StartCoroutine(CreateWithDelay(1.0f));
     }
     
     private IEnumerator CreateWithDelay(float delay)
     {
-        // Wait for the specified delay time
         yield return new WaitForSeconds(delay);
 
         var created = Instantiate(newPrefab);
-
-        //duplicate.transform.position = fixedPosition;
+        
         created.transform.position = transform.position;
 
         var rb = created.GetComponent<Rigidbody>();

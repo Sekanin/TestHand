@@ -58,7 +58,7 @@ public class Wrench : MonoBehaviour
         if (currentBolt != null)
         {
             Vector3 deltaMouse = Input.mousePosition - lastMousePosition;
-            if (deltaMouse.magnitude > 0.1f) // Ajoute une tolérance pour éviter les mouvements accidentels
+            if (deltaMouse.magnitude > 0.1f)
             {
                 float rotationDirection = Mathf.Sign(Vector3.Dot(deltaMouse, transform.right));
                 currentBolt.Unscrew(rotationDirection);
