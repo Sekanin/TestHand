@@ -40,6 +40,3 @@ public class BoltUnscrewer : MonoBehaviour
         bolt.GetComponent<Collider>().isTrigger = false;
     }
 }
-
-
-

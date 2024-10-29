@@ -35,6 +35,3 @@ public class Bolt : MonoBehaviour
         }
     }
 }
-
-
-

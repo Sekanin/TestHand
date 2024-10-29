@@ -22,4 +22,3 @@ public class DoorOpen : MonoBehaviour
         doorRight.transform.localRotation = Quaternion.Euler(0, -targetAngle, 0);
     }
 }
-

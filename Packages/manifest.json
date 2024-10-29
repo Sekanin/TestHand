@@ -1,10 +1,10 @@
 {
   "dependencies": {
-    "com.meta.xr.sdk.all": "66.0.0",
+    "com.meta.xr.sdk.all": "69.0.1",
     "com.meta.xr.sdk.haptics": "66.0.0",
     "com.unity.collab-proxy": "2.4.3",
     "com.unity.feature.development": "1.0.1",
-    "com.unity.ide.rider": "3.0.31",
+    "com.unity.ide.rider": "3.0.34",
     "com.unity.render-pipelines.universal": "14.0.11",
     "com.unity.textmeshpro": "3.0.9",
     "com.unity.timeline": "1.7.6",
